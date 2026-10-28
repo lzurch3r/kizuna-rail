@@ -26,4 +26,6 @@ const yenToUsd = (yen) => {
     return yen * exchangeRate;
 };
 
+
+
 export { generateConfirmationCode, kmToMiles, yenToUsd };
