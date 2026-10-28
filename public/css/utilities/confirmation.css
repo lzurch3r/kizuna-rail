@@ -406,14 +406,27 @@ article.confirmation-page {
 }
 
 @media print {
+    nav {
+        display:none;
+    }
     article.confirmation-page {
-        .confirmation-actions {
-            display: none;
+        .confirmation-content {
+            .confirmation-actions {
+                display: none;
+            }
+
+            .next-steps {
+                display: none;
+            }
         }
 
         .confirmation-header {
             background-color: white;
             border: 2px solid var(--clr-primary);
+            margin-top: 0;
         }
+    }
+    footer {
+        display: none;
     }
 }
