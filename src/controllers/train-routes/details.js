@@ -6,6 +6,7 @@ export default async (req, res) => {
     const details = await getRouteById(routeId);
     details.schedules = await getSchedulesByRoute(routeId);
 
+    // Convert months from numbers to 3-letter strings
     details.operatingMonths = numbersToMonths(details.operatingMonths);
     // TODO: getCompleteRouteDetails instead
 
