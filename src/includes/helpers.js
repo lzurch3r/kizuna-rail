@@ -26,6 +26,27 @@ const yenToUsd = (yen) => {
     return yen * exchangeRate;
 };
 
+/**
+ * Converts opeating months from a number to 3-letter months
+ * @param {array} operatingMonths - The months in number form
+ * @returns {array} The converted months in 3-letter form
+ */
+const numbersToMonths = (operatingMonths) => {
+    const months = [
+        'Jan','Feb','Mar',
+        'Apr','May','Jun',
+        'Jul','Aug','Sep',
+        'Oct','Nov','Dec'
+    ]
+
+    let convertedMonths = [];
+    operatingMonths.forEach(element => {
+        const index = element;
+        convertedMonths.push(months[index-1]);
+    });
+
+    return convertedMonths;
+}
 
 
-export { generateConfirmationCode, kmToMiles, yenToUsd };
+export { generateConfirmationCode, kmToMiles, yenToUsd, numbersToMonths };
